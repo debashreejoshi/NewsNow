@@ -19,8 +19,7 @@ class WebViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = ""
-
+        
         if let url = url {
             webView.load(URLRequest(url: url))
         }

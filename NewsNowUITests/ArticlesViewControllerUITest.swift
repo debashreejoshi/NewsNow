@@ -40,33 +40,4 @@ final class ArticlesViewControllerUITest: XCTestCase {
         XCTAssertTrue(articlesTableView.waitForExistence(timeout: 5))
     }
     
-//    func testTappingOnArticleNavigatesToCorrectURL() {
-//        // Create mock implementations of APIServiceProtocol and ArticlesRouterProtocol
-//        let mockApiService = MockAPIService()
-//        let mockArticlesRouter = MockArticlesRouter()
-//
-//        // Create an instance of ArticlesViewModel with the mock implementations
-//        let articlesViewModel = ArticlesViewModel(apiService: mockApiService, router: mockArticlesRouter)
-//
-//        // Fetch articles and wait for completion
-//        articlesViewModel.fetchArticles()
-//        mockApiService.fetchCompletionHandler?(.success(mockApiService.mockResponse))
-//        XCTAssertTrue(mockArticlesRouter.refreshCalled)
-//
-//        // Get the URL of the article from the view model
-//        let article = articlesViewModel.assets[0]
-//        let url = article.url
-//
-//        // Open the article URL in Safari
-//        app.openURL(URL(string: url)!)
-//
-//        // Wait for the Safari app to open
-//        let safariApp = XCUIApplication(bundleIdentifier: "com.apple.mobilesafari")
-//        XCTAssertTrue(safariApp.waitForExistence(timeout: 10))
-//
-//        // Verify that the correct URL is displayed in Safari
-//        XCTAssertTrue(safariApp.navigationBars.buttons.element(boundBy: 0).waitForExistence(timeout: 10))
-//        XCTAssertTrue(safariApp.links[url].exists)
-//    }
-
 }

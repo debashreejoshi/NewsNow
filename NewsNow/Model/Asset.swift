@@ -32,6 +32,7 @@ struct Asset: Codable {
     var timeStamp: Int
     
     var formattedTimestamp: String {
+        // Computed property to format timestamp into a readable date string
         let date = Date(timeIntervalSince1970: Double(timeStamp) / 1000)
         return DateFormatter.articleAPIDateFormatter.string(from: date)
     }
