@@ -8,7 +8,7 @@ The NewsNow app includes several additional features, including:
 
 |List|Detail|
 |-|-|
-|![List](https://user-images.githubusercontent.com/5268412/233980150-68535160-bd08-40c8-98e5-81de0600a3bf.png)|![DetailVIew]()![Detail](https://user-images.githubusercontent.com/5268412/233980403-6e7112e8-7280-4c18-a012-a0eba90cc90f.png)|
+|![List](https://user-images.githubusercontent.com/5268412/233980150-68535160-bd08-40c8-98e5-81de0600a3bf.png)|![Detail](https://user-images.githubusercontent.com/5268412/233980403-6e7112e8-7280-4c18-a012-a0eba90cc90f.png)|
 
 ### Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -19,7 +19,9 @@ You will need a Mac running macOS 10.15 or later with Xcode 12 or later installe
 ### Installing
 To install the project, first clone this repository to your local machine.
 
-``` git clone https://github.com/debashreejoshi/NewsNow.git ```
+``` 
+git clone https://github.com/debashreejoshi/NewsNow.git 
+```
 
 Then, navigate to the project directory and open the NewsNow.xcodeproj file.
 
