@@ -17,12 +17,13 @@ class ArticlesViewController: UIViewController {
     
     // MARK: - Properties
     
-    private var viewModel: ArticlesViewModelProtocol?
+     var viewModel: ArticlesViewModelProtocol?
   
     // MARK: - Lifecycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "NewsNow"
         viewModel = ArticlesViewModel(apiService: APIService(), router: ArticlesRouter(viewController: self))
     }
     

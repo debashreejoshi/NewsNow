@@ -13,11 +13,11 @@ struct ArticleCellViewModel {
     let publisher: String
     let thumbnail: String
     
-    init(asset: Asset) {
-        title = asset.headline ?? ""
-        description = asset.theAbstract
-        date = asset.formattedTimestamp
-        publisher = asset.byLine
-        thumbnail = asset.relatedImages.min { $0.width < $1.width }?.url ?? ""
+    init(title: String, description: String, date: String, publisher: String, thumbnail: String) {
+        self.title = title
+        self.description = description
+        self.date = date
+        self.publisher = publisher
+        self.thumbnail = thumbnail
     }
 }

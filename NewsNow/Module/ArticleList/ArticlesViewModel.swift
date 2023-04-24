@@ -16,6 +16,7 @@ protocol ArticlesViewModelProtocol {
 class ArticlesViewModel: ArticlesViewModelProtocol {
     
     private let apiService: APIServiceProtocol
+    private let router: ArticlesRouterProtocol
     
     var datasource: [ArticleCellViewModel] = [] {
         didSet {
@@ -24,7 +25,12 @@ class ArticlesViewModel: ArticlesViewModelProtocol {
     }
     var assets: [Asset] = [] {
         didSet {
-            datasource = assets.map{ ArticleCellViewModel(asset: $0) }
+            datasource = assets.map{ ArticleCellViewModel(
+                title: $0.headline ?? "",
+                description: $0.theAbstract,
+                date: $0.formattedTimestamp,
+                publisher: $0.byLine,
+                thumbnail: $0.relatedImages.min { $0.width < $1.width }?.url ?? "") }
         }
     }
     
@@ -32,9 +38,9 @@ class ArticlesViewModel: ArticlesViewModelProtocol {
     var onFetchCompleted: (() -> Void)?
     var onFetchFailed: (() -> Void)?
     
-    var router: ArticlesRouterProtocol
     
-    init(apiService: APIServiceProtocol = APIService(), router: ArticlesRouterProtocol) {
+    
+    init(apiService: APIServiceProtocol, router: ArticlesRouterProtocol) {
         self.apiService = apiService
         self.router = router
     }

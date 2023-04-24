@@ -18,12 +18,10 @@ class ArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var dateTimeLabel: UILabel!
     @IBOutlet weak var relatedImage: UIImageView!
     
-    // MARK: - Initialization
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
     
     // MARK: - Public Methods
     
@@ -32,7 +30,6 @@ class ArticleTableViewCell: UITableViewCell {
         self.abstractLabel.text = article.description
         self.byLineLabel.text = article.publisher
         self.dateTimeLabel.text = article.date
-        // Comment here 
        
         if let imageUrl = URL(string: article.thumbnail) {
             self.relatedImage.sd_setImage(with: imageUrl, placeholderImage: nil, options: [.continueInBackground, .progressiveLoad]) { [weak self] (image, error, cacheType, imageUrl) in

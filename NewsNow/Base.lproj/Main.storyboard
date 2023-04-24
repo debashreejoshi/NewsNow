@@ -113,10 +113,10 @@
         <!--Navigation Controller-->
         <scene sceneID="NUK-Cf-7Rn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cRD-Ym-qZb" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenVerticallyCompact="YES" id="cRD-Ym-qZb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tZK-6H-jUC">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="tZK-6H-jUC">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

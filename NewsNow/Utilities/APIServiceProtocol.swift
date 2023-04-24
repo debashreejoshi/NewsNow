@@ -14,12 +14,16 @@ protocol APIServiceProtocol {
 class APIService: APIServiceProtocol {
     private let session: URLSession
     
+    static var baseURL: String {
+        return "https://bruce-v2-mob.fairfaxmedia.com.au/1/coding_test/13ZZQX/full"
+    }
+    
     init(session: URLSession = URLSession.shared) {
         self.session = session
     }
     
     func fetchArticles(completion: @escaping (Result<ArticleResponse, Error>) -> Void) {
-        guard let url = URL(string: "https://bruce-v2-mob.fairfaxmedia.com.au/1/coding_test/13ZZQX/full") else {
+        guard let url = URL(string: APIService.baseURL) else {
             completion(.failure(APIError.invalidEndpoint))
             return
         }
